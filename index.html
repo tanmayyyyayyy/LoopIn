@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Coding Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-code"></i>
+                <span>Loopin'</span>
+            </div>
+            <div class="nav-menu">
+                <button class="nav-btn active" data-tab="about">
+                    <i class="fas fa-info-circle"></i>
+                    <span>About</span>
+                </button>
+                <button class="nav-btn" data-tab="dashboard">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </button>
+                <button class="nav-btn" data-tab="tasks">
+                    <i class="fas fa-tasks"></i>
+                    <span>Tasks</span>
+                </button>
+                <button class="nav-btn" data-tab="network">
+                    <i class="fas fa-users"></i>
+                    <span>Network</span>
+                </button>
+                <button class="nav-btn" data-tab="notes">
+                    <i class="fas fa-sticky-note"></i>
+                    <span>Notes</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- About Tab -->
+        <div id="about" class="tab-content active">
+            <div class="about-header">
+                <h1>Loopin' — Your Personal Coding Tracker</h1>
+                <p class="about-subtitle">Stay organized, motivated, and productive in your coding journey</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-intro">
+                    <p>This is a fully featured, clean, and intuitive frontend layout for a personal coding tracker web application named Loopin'. The interface is designed to help coders stay organized, motivated, and productive by managing daily tasks, networking, notes, and tracking progress.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-section">
+                        <div class="feature-header">
+                            <i class="fas fa-bars"></i>
+                            <h2>Navigation</h2>
+                        </div>
+                        <p>At the top, a fixed navigation bar provides quick access to the main sections:</p>
+                        <ul>
+                            <li><strong>Dashboard</strong> — Overview of daily coding stats and motivation.</li>
+                            <li><strong>Tasks</strong> — Manage coding tasks with filters and the ability to add new tasks.</li>
+                            <li><strong>Network</strong> — Build and manage your professional coding network with mentors, peers, and mentees.</li>
+                            <li><strong>Notes</strong> — Store notes and questions categorized by topics like algorithms and system design.</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-section">
+                        <div class="feature-header">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <h2>Dashboard</h2>
+                        </div>
+                        <p>The dashboard greets the user with a motivational message and displays key metrics in a visually appealing stats grid:</p>
+                        <ul>
+                            <li><strong>Day Streak</strong> — Track your consecutive days of coding consistency.</li>
+                            <li><strong>Today's Tasks</strong> — View how many tasks you've completed today.</li>
+                            <li><strong>Connections</strong> — Total number of network contacts.</li>
+                            <li><strong>Questions Solved</strong> — Number of coding questions solved.</li>
+                        </ul>
+                        <p>It also features a progress bar representing the completion percentage of daily goals, a quick task list highlighting completed and pending tasks, and a daily motivational quote with an option to generate fresh motivation.</p>
+                    </div>
+
+                    <div class="feature-section">
+                        <div class="feature-header">
+                            <i class="fas fa-tasks"></i>
+                            <h2>Tasks Manager</h2>
+                        </div>
+                        <p>The tasks section allows users to add new tasks, filter existing tasks by status or priority, and view their current task list. A modal popup form is included to add new tasks with details like title, description, priority, and due date.</p>
+                    </div>
+
+                    <div class="feature-section">
+                        <div class="feature-header">
+                            <i class="fas fa-users"></i>
+                            <h2>Network Building</h2>
+                        </div>
+                        <p>The network tab focuses on building and maintaining your coding community. Users can add new connections with details such as name, role, company, and connection type. A summary of total connections, mentors, peers, and mentees is also displayed.</p>
+                    </div>
+
+                    <div class="feature-section">
+                        <div class="feature-header">
+                            <i class="fas fa-sticky-note"></i>
+                            <h2>Notes & Questions</h2>
+                        </div>
+                        <p>This section is designed for storing coding notes and questions. Users can add new notes through a modal, categorize them, mark them as solved, and search/filter notes easily.</p>
+                    </div>
+
+                    <div class="feature-section">
+                        <div class="feature-header">
+                            <i class="fas fa-window-restore"></i>
+                            <h2>Modals</h2>
+                        </div>
+                        <p>Each main interactive section (Tasks, Network, Notes) has a modal dialog for adding new entries with structured input forms to capture necessary details, ensuring a smooth and focused user experience.</p>
+                    </div>
+                </div>
+
+                <div class="about-footer">
+                    <p>This HTML structure forms a robust foundation for a personal coding tracker frontend, ready to be styled and enhanced with JavaScript functionality to bring all features to life.</p>
+                    <button class="get-started-btn" onclick="switchTab('dashboard')">
+                        <i class="fas fa-rocket"></i>
+                        Get Started
+                    </button>
+                </div>
+            </div>
+            <section class="faq">
+       
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faqbox">
+        <span>What is Loopin'?</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4V20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M4 12H20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <p class="faq-answer">Loopin' is an AI-powered coding tracker that helps you stay consistent, track your daily progress, maintain coding streaks, and organize your tasks—all in one place.</p>
+    </div>
+
+    <div class="faqbox">
+        <span>How much does Loopin' cost?</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4V20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M4 12H20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <p class="faq-answer">Loopin' is 100% free. All features are available without any subscriptions or hidden charges.</p>
+    </div>
+
+    <div class="faqbox">
+        <span>What features does Loopin' offer?</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4V20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M4 12H20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <p class="faq-answer">Loopin' includes smart checklists, a calendar view, coding streak tracker, note-taking, topic tagging, dark mode, and a frontend-only login/signup system. All data is stored locally.</p>
+    </div>
+
+    <div class="faqbox">
+        <span>Is my data safe on Loopin'?</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4V20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M4 12H20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <p class="faq-answer">Yes! Loopin' uses browser local storage, meaning all your data stays on your device. No external servers or cloud syncing (yet).</p>
+    </div>
+
+    <div class="faqbox">
+        <span>Can I use Loopin' on mobile?</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4V20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M4 12H20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <p class="faq-answer">Absolutely! Loopin' is fully responsive and works smoothly on both desktop and mobile browsers.</p>
+    </div>
+</section>
+<div class="separation"></div>
+
+    <footer>
+        <div class="questions">
+            Questions? Call 000-800-919-1694
+        </div>
+        <div class="footer">
+            <div class="footer-item"> 
+                <a href="faq">Investor Relations</a>
+                <a href="faq">Jobs</a>
+                <a href="faq">Ways to Watch</a>
+                <a href="faq">Terms of Use</a>
+            </div>
+
+            <div class="footer-item"> 
+                <a href="faq">Help Centre</a>
+                <a href="faq">Account</a>
+                <a href="faq">Speed Test</a>
+                <a href="faq">Legal Notices</a>
+            </div>
+            <div class="footer-item">
+                <a href="faq">Media Centre</a>
+                <a href="faq">Privacy</a>
+                <a href="faq">Cookie Preferences</a> 
+                <a href="faq">Corporate</a>
+            </div>
+
+            <div class="footer-item">
+                <a href="faq">Contact Us</a>
+                <a href="faq">Speed Test</a> 
+                <a href="faq">Legal Notices</a> 
+                <a href="faq">Only on Netflix</a>
+            </div>
+        </div>
+    </footer>
+        </div>
+    
+
+        <!-- Dashboard Tab -->
+        <div id="dashboard" class="tab-content">
+            <div class="dashboard-header">
+                <h1>Welcome back, Coder!</h1>
+                <p>Stay consistent, stay strong. Your coding journey continues today.</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card streak-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="streak-count">15</h3>
+                        <p>Day Streak</p>
+                    </div>
+                </div>
+
+                <div class="stat-card tasks-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="completed-tasks">8/12</h3>
+                        <p>Today's Tasks</p>
+                    </div>
+                </div>
+
+                <div class="stat-card network-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="network-connections">24</h3>
+                        <p>Connections</p>
+                    </div>
+                </div>
+
+                <div class="stat-card notes-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="solved-questions">156</h3>
+                        <p>Questions Solved</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="progress-section">
+                    <h2>Today's Progress</h2>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="daily-progress"></div>
+                    </div>
+                    <p class="progress-text">67% Complete</p>
+
+                    <div class="quick-tasks">
+                        <h3>Quick Tasks</h3>
+                        <div class="task-item completed">
+                            <i class="fas fa-check"></i>
+                            <span>Review JavaScript fundamentals</span>
+                        </div>
+                        <div class="task-item completed">
+                            <i class="fas fa-check"></i>
+                            <span>Practice algorithms</span>
+                        </div>
+                        <div class="task-item pending">
+                            <i class="far fa-circle"></i>
+                            <span>Build portfolio project</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="motivation-section">
+                    <h2>Daily Motivation</h2>
+                    <div class="motivation-card">
+                        <i class="fas fa-quote-left"></i>
+                        <p id="daily-quote">"The only way to do great work is to love what you do."</p>
+                        <!-- <small>- Steve Jobs</small> -->
+                    </div>
+                    
+                    <div class="consistency-reminder">
+                        <h3>Consistency Reminder</h3>
+                        <p>Small daily progress leads to big results. Keep going!</p>
+                        <button class="motivation-btn" onclick="generateMotivation()">
+                            <i class="fas fa-magic"></i>
+                            Get Motivated
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tasks Tab -->
+        <div id="tasks" class="tab-content">
+            <div class="tasks-header">
+                <h1>Task Manager</h1>
+                <button class="add-btn" onclick="openTaskModal()">
+                    <i class="fas fa-plus"></i>
+                    Add Task
+                </button>
+            </div>
+
+            <div class="tasks-filter">
+                <button class="filter-btn active" data-filter="all">All Tasks</button>
+                <button class="filter-btn" data-filter="pending">Pending</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+                <button class="filter-btn" data-filter="high">High Priority</button>
+            </div>
+
+            <div class="tasks-container" id="tasks-container">
+                <!-- Tasks will be dynamically generated -->
+            </div>
+        </div>
+
+        <!-- Network Tab -->
+        <div id="network" class="tab-content">
+            <div class="network-header">
+                <h1>Network Building</h1>
+                <button class="add-btn" onclick="openNetworkModal()">
+                    <i class="fas fa-user-plus"></i>
+                    Add Connection
+                </button>
+            </div>
+
+            <div class="network-stats">
+                <div class="network-stat">
+                    <h3>42</h3>
+                    <p>Total Connections</p>
+                </div>
+                <div class="network-stat">
+                    <h3>8</h3>
+                    <p>Mentors</p>
+                </div>
+                <div class="network-stat">
+                    <h3>15</h3>
+                    <p>Peers</p>
+                </div>
+                <div class="network-stat">
+                    <h3>19</h3>
+                    <p>Mentees</p>
+                </div>
+            </div>
+
+            <div class="network-grid" id="network-grid">
+                <!-- Network connections will be generated -->
+            </div>
+        </div>
+
+        <!-- Notes Tab -->
+        <div id="notes" class="tab-content">
+            <div class="notes-header">
+                <h1>Notes & Questions</h1>
+                <button class="add-btn" onclick="openNoteModal()">
+                    <i class="fas fa-plus"></i>
+                    Add Note
+                </button>
+            </div>
+
+            <div class="notes-search">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search notes and questions..." id="notes-search" />
+                </div>
+                <div class="notes-filter">
+                    <select id="category-filter">
+                        <option value="all">All Categories</option>
+                        <option value="algorithms">Algorithms</option>
+                        <option value="web-dev">Web Development</option>
+                        <option value="data-structures">Data Structures</option>
+                        <option value="system-design">System Design</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="notes-container" id="notes-container">
+                <!-- Notes will be dynamically generated -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Task Modal -->
+    <div id="task-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add New Task</h2>
+                <button class="close-btn" onclick="closeTaskModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="task-form">
+                <div class="form-group">
+                    <label for="task-title">Task Title</label>
+                    <input type="text" id="task-title" required />
+                </div>
+                <div class="form-group">
+                    <label for="task-description">Description</label>
+                    <textarea id="task-description" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="task-priority">Priority</label>
+                    <select id="task-priority">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="task-date">Due Date</label>
+                    <input type="date" id="task-date" />
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="cancel-btn" onclick="closeTaskModal()">Cancel</button>
+                    <button type="submit" class="submit-btn">Add Task</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Network Modal -->
+    <div id="network-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add Network Connection</h2>
+                <button class="close-btn" onclick="closeNetworkModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="network-form">
+                <div class="form-group">
+                    <label for="contact-name">Name</label>
+                    <input type="text" id="contact-name" required />
+                </div>
+                <div class="form-group">
+                    <label for="contact-role">Role/Title</label>
+                    <input type="text" id="contact-role" />
+                </div>
+                <div class="form-group">
+                    <label for="contact-company">Company</label>
+                    <input type="text" id="contact-company" />
+                </div>
+                <div class="form-group">
+                    <label for="contact-type">Connection Type</label>
+                    <select id="contact-type">
+                        <option value="mentor">Mentor</option>
+                        <option value="peer">Peer</option>
+                        <option value="mentee">Mentee</option>
+                        <option value="colleague">Colleague</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="contact-notes">Notes</label>
+                    <textarea id="contact-notes" rows="3"></textarea>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="cancel-btn" onclick="closeNetworkModal()">Cancel</button>
+                    <button type="submit" class="submit-btn">Add Connection</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Note Modal -->
+    <div id="note-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add New Note</h2>
+                <button class="close-btn" onclick="closeNoteModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="note-form">
+                <div class="form-group">
+                    <label for="note-title">Title</label>
+                    <input type="text" id="note-title" required />
+                </div>
+                <div class="form-group">
+                    <label for="note-category">Category</label>
+                    <select id="note-category">
+                        <option value="algorithms">Algorithms</option>
+                        <option value="web-dev">Web Development</option>
+                        <option value="data-structures">Data Structures</option>
+                        <option value="system-design">System Design</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="note-content">Content</label>
+                    <textarea id="note-content" rows="8" placeholder="Write your note or question here..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="note-solved" /> Mark as solved
+                    </label>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="cancel-btn" onclick="closeNoteModal()">Cancel</button>
+                    <button type="submit" class="submit-btn">Save Note</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- <section class="faq">
+       
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faqbox">
+        <span>What is Loopin'?</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4V20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M4 12H20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <p class="faq-answer">Loopin' is an AI-powered coding tracker that helps you stay consistent, track your daily progress, maintain coding streaks, and organize your tasks—all in one place.</p>
+    </div>
+
+    <div class="faqbox">
+        <span>How much does Loopin' cost?</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4V20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M4 12H20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <p class="faq-answer">Loopin' is 100% free. All features are available without any subscriptions or hidden charges.</p>
+    </div>
+
+    <div class="faqbox">
+        <span>What features does Loopin' offer?</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4V20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M4 12H20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <p class="faq-answer">Loopin' includes smart checklists, a calendar view, coding streak tracker, note-taking, topic tagging, dark mode, and a frontend-only login/signup system. All data is stored locally.</p>
+    </div>
+
+    <div class="faqbox">
+        <span>Is my data safe on Loopin'?</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4V20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M4 12H20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <p class="faq-answer">Yes! Loopin' uses browser local storage, meaning all your data stays on your device. No external servers or cloud syncing (yet).</p>
+    </div>
+
+    <div class="faqbox">
+        <span>Can I use Loopin' on mobile?</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4V20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M4 12H20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <p class="faq-answer">Absolutely! Loopin' is fully responsive and works smoothly on both desktop and mobile browsers.</p>
+    </div>
+</section> -->
+
+    <!-- <div class="separation"></div>
+
+    <footer>
+        <div class="questions">
+            Questions? Call 000-800-919-1694
+        </div>
+        <div class="footer">
+            <div class="footer-item"> 
+                <a href="faq">Investor Relations</a>
+                <a href="faq">Jobs</a>
+                <a href="faq">Ways to Watch</a>
+                <a href="faq">Terms of Use</a>
+            </div>
+
+            <div class="footer-item"> 
+                <a href="faq">Help Centre</a>
+                <a href="faq">Account</a>
+                <a href="faq">Speed Test</a>
+                <a href="faq">Legal Notices</a>
+            </div>
+            <div class="footer-item">
+                <a href="faq">Media Centre</a>
+                <a href="faq">Privacy</a>
+                <a href="faq">Cookie Preferences</a> 
+                <a href="faq">Corporate</a>
+            </div>
+
+            <div class="footer-item">
+                <a href="faq">Contact Us</a>
+                <a href="faq">Speed Test</a> 
+                <a href="faq">Legal Notices</a> 
+                <a href="faq">Only on Netflix</a>
+            </div>
+        </div>
+    </footer> -->
+
+    <script src="script.js"></script>
+</body>
+</html>
